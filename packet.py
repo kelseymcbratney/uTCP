@@ -1,7 +1,7 @@
 # Kelsey McBratney
 # Computer Networking A365
 # TCP Over UDP Client
-from bitstring import pack, BitArray
+from bitstring import pack, BitArray, BitStream
 from crccheck.checksum import Checksum16
 from log import *
 

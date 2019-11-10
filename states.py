@@ -2,6 +2,7 @@
 # Computer Networking A365
 # TCP Over UDP Client
 from statemachine import StateMachine, State
+from bitstring import pack, BitArray, BitStream
 from packet import *
 import socket
 import random
@@ -53,21 +54,29 @@ class StateHandler:
         self.TIMEOUT = 5
         self.UDPsocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.UDPsocket.settimeout(self.TIMEOUT)
+        self.previousSeqnum = 0
+        self.previousACK = 0
 
         self.run()
 
     def receive(self):
         (incpacket, (self.adr, self.sp)) = self.UDPsocket.recvfrom(2048)
-        print(incpacket)
-        if incpacket[110] == '1': # SYN bit
-            if incpacket[107] == '1': # ACK Bit
+        incbits = BitStream(incpacket)
+        incbits = incbits.bin
+        if incbits[110] == '1': # SYN bit
+            if incbits[107] == '1': # ACK Bit
                 packet = SYNACK()
-                packet.binary = incpacket
+                packet.binary = incbits
+                packet.decode()
+                print
+                self.previousSeqnum = packet.header['seqnum']
+                self.previousACK = packet.header['acknum']
                 return packet
-        elif incpacket[111] == '1': # FIN
-            if incpacket[107] == '1': # ACK
+        elif incbits[111] == '1': # FIN
+            if incbits[107] == '1': # ACK
                 packet = FINACK()
-                packet.binary = incpacket
+                packet.binary = incbits
+                packet.decode()
                 return packet
 
     def run(self):
@@ -77,9 +86,22 @@ class StateHandler:
                 packet.header['srcport'] = self.sp
                 packet.header['dstport'] = self.cp
                 packet.header['seqnum'] = random.randint(1, 50000)
+                packet.header['dataoffset'] = 15
 
                 self.UDPsocket.sendto(packet.encode().bytes.bytes, (self.adr, self.sp))
-                self.receive()
+                rcvpacket = self.receive()
+
+                packet = ACK()
+                packet.header['srcport'] = self.sp
+                packet.header['dstport'] = self.cp
+                packet.header['seqnum'] = self.previousACK
+                packet.header['acknum'] = self.previousSeqnum + 1
+                packet.header['dataoffset'] = 15
+
+                self.UDPsocket.sendto(packet.encode().bytes.bytes, (self.adr, self.sp))
+                rcvpacket = self.receive()
+
+
                 self.states.run('cycle')
             elif self.states.is_synsent:
 
