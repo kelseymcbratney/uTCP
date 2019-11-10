@@ -1,7 +1,11 @@
+# Kelsey McBratney
+# Computer Networking A365
+# TCP Over UDP Client
 from statemachine import StateMachine, State
 from packet import *
 import socket
-import struct
+import random
+
 
 
 class States(StateMachine):
@@ -45,13 +49,26 @@ class StateHandler:
         self.adr = adr
         self.sp = sp
         self.cp = cp
-        self.fn = open(fn, 'wb')
+        self.fn = open(fn, 'rb')
+        self.TIMEOUT = 5
         self.UDPsocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.UDPsocket.settimeout(self.TIMEOUT)
 
         self.run()
 
     def receive(self):
-        (packet, (adr, sp)) = self.UDPsocket.recvfrom(2048)
+        (incpacket, (self.adr, self.sp)) = self.UDPsocket.recvfrom(2048)
+        print(incpacket)
+        if incpacket[110] == '1': # SYN bit
+            if incpacket[107] == '1': # ACK Bit
+                packet = SYNACK()
+                packet.binary = incpacket
+                return packet
+        elif incpacket[111] == '1': # FIN
+            if incpacket[107] == '1': # ACK
+                packet = FINACK()
+                packet.binary = incpacket
+                return packet
 
     def run(self):
         while not self.states.is_complete:
@@ -59,7 +76,10 @@ class StateHandler:
                 packet = SYN()
                 packet.header['srcport'] = self.sp
                 packet.header['dstport'] = self.cp
-                self.UDPsocket.sendto(packet.encode().bin.encode('ascii'), ('127.0.0.1', self.sp))
+                packet.header['seqnum'] = random.randint(1, 50000)
+
+                self.UDPsocket.sendto(packet.encode().bytes.bytes, (self.adr, self.sp))
+                self.receive()
                 self.states.run('cycle')
             elif self.states.is_synsent:
 
@@ -75,5 +95,5 @@ class StateHandler:
             elif self.states.is_closed:
                 self.states.run('cycle')
 
-test = StateHandler('127.0.0.1', 1, 1, 1)
 
+# StateHandler('127.0.0.1',12000,12000,'file')

@@ -1,3 +1,6 @@
+# Kelsey McBratney
+# Computer Networking A365
+# TCP Over UDP Client
 from bitstring import pack, BitArray
 from crccheck.checksum import Checksum16
 from log import *
@@ -43,42 +46,42 @@ class Packet:
                       "uint:16=urgtptr," \
  \
         # Binary of total Header
-        self.bin = None
+        self.binary = None
+        self.bytes = None
         logger.info('Created Packet: %s', self)
 
     def encode(self):
-        self.bin = pack(self.bitfmt, **self.header).bin
+        self.bytes = pack(self.bitfmt, **self.header)  # Fake Packet for Checksum to be made
+        self.binary = self.bytes.bin
         self.header['checksum'] = self.calc_checksum()
-        self.bin = self.bin[:128] + BitArray(uint=self.header['checksum'], length=16).bin + self.bin[144:]
+        self.bytes = pack(self.bitfmt, **self.header)  # Final Packet
+        self.binary = self.bytes.bin
         logger.info('Encoded Packet: %s', self)
         return self
 
-    def decode(self):
-        self.header['srcport'] = int(self.bin[0:16], 2)
-        self.header['dstport'] = int(self.bin[16:32], 2)
-        self.header['seqnum'] = int(self.bin[32:64], 2)
-        self.header['acknum'] = int(self.bin[64:96], 2)
-        self.header['dataoffset'] = int(self.bin[96:100], 2)
-        self.header['reserved'] = int(self.bin[100:106], 2)
-        self.header['urg'] = int(self.bin[106], 2)
-        self.header['ack'] = int(self.bin[107], 2)
-        self.header['psh'] = int(self.bin[108], 2)
-        self.header['rst'] = int(self.bin[109], 2)
-        self.header['syn'] = int(self.bin[110], 2)
-        self.header['fin'] = int(self.bin[111], 2)
-        self.header['window'] = int(self.bin[112:128], 2)
-        self.header['checksum'] = int(self.bin[128:144], 2)
-        self.header['urgtptr'] = int(self.bin[144:160], 2)
-        logger.info('Decoded Packet: %s', self)
-        return self
-
     def calc_checksum(self):
-        self.header['checksum'] = Checksum16.calc(BitArray(bin=pack(self.bitfmt, **self.header).bin))
+        self.header['checksum'] = Checksum16.calc(self.bytes.bytes)
         logger.info('Inserted Checksum: %s', self)
         return self.header['checksum']
 
-    def debug(self):
-        print(self.header)
+    def decode(self):
+        self.header['srcport'] = int(self.binary[0:16], 2)
+        self.header['dstport'] = int(self.binary[16:32], 2)
+        self.header['seqnum'] = int(self.binary[32:64], 2)
+        self.header['acknum'] = int(self.binary[64:96], 2)
+        self.header['dataoffset'] = int(self.binary[96:100], 2)
+        self.header['reserved'] = int(self.binary[100:106], 2)
+        self.header['urg'] = int(self.binary[106], 2)
+        self.header['ack'] = int(self.binary[107], 2)
+        self.header['psh'] = int(self.binary[108], 2)
+        self.header['rst'] = int(self.binary[109], 2)
+        self.header['syn'] = int(self.binary[110], 2)
+        self.header['fin'] = int(self.binary[111], 2)
+        self.header['window'] = int(self.binary[112:128], 2)
+        self.header['checksum'] = int(self.binary[128:144], 2)
+        self.header['urgtptr'] = int(self.binary[144:160], 2)
+        logger.info('Decoded Packet: %s', self)
+        return self
 
 
 class DATA(Packet):
@@ -87,19 +90,18 @@ class DATA(Packet):
         self.data = None
         logger.info('Created DATA Packet: %s', self)
 
-
     def encode(self):
-        self.bin = pack(self.bitfmt, **self.header).bin
-        self.bin += self.data
+        self.binary = pack(self.bitfmt, **self.header).bin
+        self.binary += self.data
         self.header['checksum'] = self.calc_checksum()
-        self.bin = self.bin[:128] + BitArray(uint=self.header['checksum'], length=16).bin + self.bin[144:]
+        self.binary = self.binary[:128] + BitArray(uint=self.header['checksum'], length=16).bin + self.binary[144:]
         logger.info('Encoded DATA Packet: %s', self)
         return self
 
     def calc_checksum(self):
         self.header['data'] = 0
-        self.bin = pack(self.bitfmt, **self.header).bin + self.data
-        self.bin = self.bin[:128] + BitArray(uint=self.header['checksum'], length=16).bin + self.bin[144:]
+        self.binary = pack(self.bitfmt, **self.header).bin + self.data
+        self.binary = self.binary[:128] + BitArray(uint=self.header['checksum'], length=16).bin + self.binary[144:]
         logger.info('Encoded DATA Packet: %s', self)
         pass
 
@@ -140,6 +142,7 @@ class FINACK(Packet):
         self.header['ack'] = 1
         logger.info('Created FIN-ACK Packet: %s', self)
 
+
 class CONVERT(Packet):
     def __init__(self, binary):
         Packet.__init__(self)
@@ -158,6 +161,7 @@ class CONVERT(Packet):
         self.header['window'] = int(binary[112:128], 2)
         self.header['checksum'] = int(binary[128:144], 2)
         self.header['urgtptr'] = int(binary[144:160], 2)
+
 
 
 

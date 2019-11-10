@@ -235,3 +235,589 @@
 2019-11-08 15:11:39,304 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
 2019-11-08 15:11:39,304 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
 2019-11-08 15:11:39,304 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-08 20:17:29,985 - log - INFO - Created Packet: <packet.SYN object at 0x000002620F601128>
+2019-11-08 20:17:29,985 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002620F601128>
+2019-11-08 20:17:29,987 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002620F601128>
+2019-11-08 20:17:29,987 - log - INFO - Encoded Packet: <packet.SYN object at 0x000002620F601128>
+2019-11-08 20:17:29,987 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-08 20:17:29,987 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-08 20:17:29,987 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-08 20:17:29,988 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-08 20:17:29,988 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-08 20:17:29,988 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-08 20:17:29,988 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-08 20:21:52,368 - log - INFO - Created Packet: <packet.SYN object at 0x0000023EECE4EBE0>
+2019-11-08 20:21:52,368 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000023EECE4EBE0>
+2019-11-08 20:21:52,369 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000023EECE4EBE0>
+2019-11-08 20:21:52,370 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000023EECE4EBE0>
+2019-11-08 20:21:52,370 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-08 20:21:52,370 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-08 20:21:52,370 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-08 20:21:52,370 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-08 20:21:52,370 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-08 20:21:52,370 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-08 20:21:52,370 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-08 20:23:04,814 - log - INFO - Created Packet: <packet.SYN object at 0x00000247DCABEBA8>
+2019-11-08 20:23:04,814 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000247DCABEBA8>
+2019-11-08 20:23:04,815 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000247DCABEBA8>
+2019-11-08 20:23:04,815 - log - INFO - Encoded Packet: <packet.SYN object at 0x00000247DCABEBA8>
+2019-11-08 20:24:57,594 - log - INFO - Created Packet: <packet.SYN object at 0x000002548A5BEC18>
+2019-11-08 20:24:57,594 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002548A5BEC18>
+2019-11-08 20:24:57,595 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002548A5BEC18>
+2019-11-08 20:24:57,595 - log - INFO - Encoded Packet: <packet.SYN object at 0x000002548A5BEC18>
+2019-11-08 20:25:22,483 - log - INFO - Created Packet: <packet.SYN object at 0x0000015691A4EBE0>
+2019-11-08 20:25:22,483 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000015691A4EBE0>
+2019-11-08 20:25:22,485 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000015691A4EBE0>
+2019-11-08 20:25:22,485 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000015691A4EBE0>
+2019-11-08 20:28:34,629 - log - ERROR - Invalid Address: None
+2019-11-08 20:29:36,296 - log - ERROR - Invalid Address: None
+2019-11-08 22:00:16,689 - log - ERROR - Invalid Address: None
+2019-11-08 22:00:21,285 - log - INFO - Created Packet: <packet.SYNACK object at 0x0000024E161D1A58>
+2019-11-08 22:00:21,285 - log - INFO - Created SYN-ACK Packet: <packet.SYNACK object at 0x0000024E161D1A58>
+2019-11-08 22:00:21,286 - log - INFO - Inserted Checksum: <packet.SYNACK object at 0x0000024E161D1A58>
+2019-11-08 22:00:21,286 - log - INFO - Encoded Packet: <packet.SYNACK object at 0x0000024E161D1A58>
+2019-11-08 22:00:21,286 - log - INFO - Decoded Packet: <packet.SYNACK object at 0x0000024E161D1A58>
+2019-11-08 22:03:46,075 - log - INFO - Created Packet: <packet.SYNACK object at 0x0000025F37361A58>
+2019-11-08 22:03:46,075 - log - INFO - Created SYN-ACK Packet: <packet.SYNACK object at 0x0000025F37361A58>
+2019-11-08 22:03:46,076 - log - INFO - Inserted Checksum: <packet.SYNACK object at 0x0000025F37361A58>
+2019-11-08 22:03:46,076 - log - INFO - Encoded Packet: <packet.SYNACK object at 0x0000025F37361A58>
+2019-11-08 22:03:46,077 - log - INFO - Decoded Packet: <packet.SYNACK object at 0x0000025F37361A58>
+2019-11-08 22:05:07,137 - log - INFO - Created Packet: <packet.SYNACK object at 0x0000029167371A58>
+2019-11-08 22:05:07,138 - log - INFO - Created SYN-ACK Packet: <packet.SYNACK object at 0x0000029167371A58>
+2019-11-08 22:05:07,139 - log - INFO - Inserted Checksum: <packet.SYNACK object at 0x0000029167371A58>
+2019-11-08 22:05:07,139 - log - INFO - Encoded Packet: <packet.SYNACK object at 0x0000029167371A58>
+2019-11-08 22:05:07,139 - log - INFO - Decoded Packet: <packet.SYNACK object at 0x0000029167371A58>
+2019-11-08 22:05:14,710 - log - INFO - Created Packet: <packet.SYN object at 0x00000233125F9400>
+2019-11-08 22:05:14,710 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000233125F9400>
+2019-11-08 22:05:14,711 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000233125F9400>
+2019-11-08 22:05:14,711 - log - INFO - Encoded Packet: <packet.SYN object at 0x00000233125F9400>
+2019-11-08 22:06:03,387 - log - INFO - Created Packet: <packet.SYN object at 0x0000024C36008470>
+2019-11-08 22:06:03,387 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000024C36008470>
+2019-11-08 22:06:03,389 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000024C36008470>
+2019-11-08 22:06:03,389 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000024C36008470>
+2019-11-08 22:06:13,684 - log - INFO - Created Packet: <packet.SYN object at 0x000001DED72884A8>
+2019-11-08 22:06:13,685 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001DED72884A8>
+2019-11-08 22:06:13,686 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001DED72884A8>
+2019-11-08 22:06:13,686 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001DED72884A8>
+2019-11-08 22:06:13,686 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-08 22:06:13,686 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-08 22:06:13,686 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-08 22:06:13,686 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-08 22:06:13,686 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-08 22:06:13,686 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-08 22:06:13,686 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 12:11:34,388 - log - INFO - Created Packet: <packet.SYNACK object at 0x0000015558BF1AC8>
+2019-11-09 12:11:34,388 - log - INFO - Created SYN-ACK Packet: <packet.SYNACK object at 0x0000015558BF1AC8>
+2019-11-09 12:11:34,390 - log - INFO - Inserted Checksum: <packet.SYNACK object at 0x0000015558BF1AC8>
+2019-11-09 12:11:34,390 - log - INFO - Encoded Packet: <packet.SYNACK object at 0x0000015558BF1AC8>
+2019-11-09 12:11:34,390 - log - INFO - Decoded Packet: <packet.SYNACK object at 0x0000015558BF1AC8>
+2019-11-09 12:11:48,925 - log - INFO - Created Packet: <packet.Packet object at 0x000001D1D70C1AC8>
+2019-11-09 12:11:48,926 - log - INFO - Inserted Checksum: <packet.Packet object at 0x000001D1D70C1AC8>
+2019-11-09 12:11:48,927 - log - INFO - Encoded Packet: <packet.Packet object at 0x000001D1D70C1AC8>
+2019-11-09 12:11:48,927 - log - INFO - Decoded Packet: <packet.Packet object at 0x000001D1D70C1AC8>
+2019-11-09 12:17:43,517 - log - INFO - Created Packet: <packet.Packet object at 0x0000026DFB5E1DD8>
+2019-11-09 12:17:56,821 - log - INFO - Created Packet: <packet.Packet object at 0x0000013157DF1DD8>
+2019-11-09 12:18:36,079 - log - INFO - Created Packet: <packet.Packet object at 0x00000194C7DA1DD8>
+2019-11-09 12:19:08,947 - log - INFO - Created Packet: <packet.Packet object at 0x000002B588E91AC8>
+2019-11-09 12:19:08,948 - log - INFO - Inserted Checksum: <packet.Packet object at 0x000002B588E91AC8>
+2019-11-09 12:19:08,948 - log - INFO - Encoded Packet: <packet.Packet object at 0x000002B588E91AC8>
+2019-11-09 12:19:08,948 - log - INFO - Decoded Packet: <packet.Packet object at 0x000002B588E91AC8>
+2019-11-09 12:19:26,347 - log - INFO - Created Packet: <packet.Packet object at 0x0000016BEA6B1DD8>
+2019-11-09 12:19:57,533 - log - INFO - Created Packet: <packet.Packet object at 0x000001E9ED1B1DD8>
+2019-11-09 12:20:13,289 - log - INFO - Created Packet: <packet.Packet object at 0x000001C178861DD8>
+2019-11-09 12:20:28,121 - log - INFO - Created Packet: <packet.Packet object at 0x00000276E01E1DD8>
+2019-11-09 12:21:00,786 - log - INFO - Created Packet: <packet.Packet object at 0x000001E166801DD8>
+2019-11-09 12:21:00,787 - log - INFO - Encoded Packet: <packet.Packet object at 0x000001E166801DD8>
+2019-11-09 12:21:27,030 - log - INFO - Created Packet: <packet.Packet object at 0x0000022BF9821DD8>
+2019-11-09 12:21:27,031 - log - INFO - Encoded Packet: <packet.Packet object at 0x0000022BF9821DD8>
+2019-11-09 12:25:03,437 - log - INFO - Created Packet: <packet.Packet object at 0x0000018349AF9128>
+2019-11-09 12:25:03,439 - log - INFO - Inserted Checksum: <packet.Packet object at 0x0000018349AF9128>
+2019-11-09 12:25:03,439 - log - INFO - Encoded Packet: <packet.Packet object at 0x0000018349AF9128>
+2019-11-09 12:29:45,009 - log - INFO - Created Packet: <packet.Packet object at 0x0000022103CE9160>
+2019-11-09 12:29:45,010 - log - INFO - Inserted Checksum: <packet.Packet object at 0x0000022103CE9160>
+2019-11-09 12:29:45,010 - log - INFO - Encoded Packet: <packet.Packet object at 0x0000022103CE9160>
+2019-11-09 12:29:59,659 - log - INFO - Created Packet: <packet.Packet object at 0x000001CABB189160>
+2019-11-09 12:30:24,523 - log - INFO - Created Packet: <packet.Packet object at 0x0000020053F19160>
+2019-11-09 12:30:24,524 - log - INFO - Encoded Packet: <packet.Packet object at 0x0000020053F19160>
+2019-11-09 12:30:43,802 - log - INFO - Created Packet: <packet.SYNACK object at 0x000001F17FE69160>
+2019-11-09 12:30:43,802 - log - INFO - Created SYN-ACK Packet: <packet.SYNACK object at 0x000001F17FE69160>
+2019-11-09 12:30:43,803 - log - INFO - Encoded Packet: <packet.SYNACK object at 0x000001F17FE69160>
+2019-11-09 12:32:56,420 - log - INFO - Created Packet: <packet.SYNACK object at 0x000001C57FD81D30>
+2019-11-09 12:32:56,420 - log - INFO - Created SYN-ACK Packet: <packet.SYNACK object at 0x000001C57FD81D30>
+2019-11-09 12:32:56,421 - log - INFO - Encoded Packet: <packet.SYNACK object at 0x000001C57FD81D30>
+2019-11-09 12:33:09,582 - log - INFO - Created Packet: <packet.SYNACK object at 0x00000138AC471D30>
+2019-11-09 12:33:09,583 - log - INFO - Created SYN-ACK Packet: <packet.SYNACK object at 0x00000138AC471D30>
+2019-11-09 12:33:09,583 - log - INFO - Encoded Packet: <packet.SYNACK object at 0x00000138AC471D30>
+2019-11-09 12:33:41,501 - log - INFO - Created Packet: <packet.SYNACK object at 0x0000025B4AEC1D30>
+2019-11-09 12:33:41,501 - log - INFO - Created SYN-ACK Packet: <packet.SYNACK object at 0x0000025B4AEC1D30>
+2019-11-09 12:33:41,502 - log - INFO - Inserted Checksum: <packet.SYNACK object at 0x0000025B4AEC1D30>
+2019-11-09 12:33:41,502 - log - INFO - Encoded Packet: <packet.SYNACK object at 0x0000025B4AEC1D30>
+2019-11-09 12:33:56,041 - log - INFO - Created Packet: <packet.SYN object at 0x000001D440101D30>
+2019-11-09 12:33:56,041 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001D440101D30>
+2019-11-09 12:33:56,042 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001D440101D30>
+2019-11-09 12:33:56,042 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001D440101D30>
+2019-11-09 12:36:38,304 - log - INFO - Created Packet: <packet.SYN object at 0x00000214207A8438>
+2019-11-09 12:36:38,304 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000214207A8438>
+2019-11-09 12:36:38,305 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000214207A8438>
+2019-11-09 12:36:38,305 - log - INFO - Encoded Packet: <packet.SYN object at 0x00000214207A8438>
+2019-11-09 12:36:38,305 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 12:36:38,305 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 12:36:38,306 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 12:36:38,306 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 12:36:38,306 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 12:36:38,306 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 12:36:38,306 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 12:37:05,524 - log - INFO - Created Packet: <packet.SYN object at 0x0000027873158400>
+2019-11-09 12:37:05,524 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000027873158400>
+2019-11-09 12:37:05,525 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000027873158400>
+2019-11-09 12:37:05,526 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000027873158400>
+2019-11-09 12:37:05,526 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 12:37:05,526 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 12:37:05,526 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 12:37:05,526 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 12:37:05,526 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 12:37:05,526 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 12:37:05,526 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 12:47:31,524 - log - INFO - Created Packet: <packet.SYN object at 0x0000011C4F148438>
+2019-11-09 12:47:31,524 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000011C4F148438>
+2019-11-09 12:47:31,525 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000011C4F148438>
+2019-11-09 12:47:31,525 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000011C4F148438>
+2019-11-09 12:47:31,525 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 12:47:31,525 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 12:47:31,525 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 12:47:31,525 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 12:47:31,525 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 12:47:31,525 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 12:47:31,525 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 12:47:39,942 - log - INFO - Created Packet: <packet.SYN object at 0x000001CECAAE1D30>
+2019-11-09 12:47:39,942 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001CECAAE1D30>
+2019-11-09 12:47:39,943 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001CECAAE1D30>
+2019-11-09 12:47:39,943 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001CECAAE1D30>
+2019-11-09 12:49:11,750 - log - INFO - Created Packet: <packet.SYN object at 0x0000020829FD9128>
+2019-11-09 12:49:11,750 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000020829FD9128>
+2019-11-09 12:49:11,751 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000020829FD9128>
+2019-11-09 12:49:11,752 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000020829FD9128>
+2019-11-09 13:00:45,359 - log - INFO - Created Packet: <packet.SYN object at 0x000001A868E29128>
+2019-11-09 13:00:45,359 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001A868E29128>
+2019-11-09 13:00:45,360 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001A868E29128>
+2019-11-09 13:01:16,537 - log - INFO - Created Packet: <packet.SYN object at 0x000001869C079128>
+2019-11-09 13:01:16,537 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001869C079128>
+2019-11-09 13:01:16,538 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001869C079128>
+2019-11-09 13:01:23,940 - log - INFO - Created Packet: <packet.SYN object at 0x0000022433829128>
+2019-11-09 13:01:23,940 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000022433829128>
+2019-11-09 13:01:23,940 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000022433829128>
+2019-11-09 13:02:38,796 - log - INFO - Created Packet: <packet.SYN object at 0x0000014F99ED9128>
+2019-11-09 13:02:38,796 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000014F99ED9128>
+2019-11-09 13:02:38,797 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000014F99ED9128>
+2019-11-09 13:02:59,850 - log - INFO - Created Packet: <packet.SYN object at 0x0000018394DB9128>
+2019-11-09 13:02:59,850 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000018394DB9128>
+2019-11-09 13:02:59,851 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000018394DB9128>
+2019-11-09 13:02:59,851 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000018394DB9128>
+2019-11-09 13:03:32,287 - log - INFO - Created Packet: <packet.SYN object at 0x0000024D95801D30>
+2019-11-09 13:03:32,287 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000024D95801D30>
+2019-11-09 13:03:32,288 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000024D95801D30>
+2019-11-09 13:03:32,288 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000024D95801D30>
+2019-11-09 13:03:39,407 - log - INFO - Created Packet: <packet.SYN object at 0x0000026764A79128>
+2019-11-09 13:03:39,407 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000026764A79128>
+2019-11-09 13:03:39,409 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000026764A79128>
+2019-11-09 13:03:39,409 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000026764A79128>
+2019-11-09 13:18:03,477 - log - INFO - Created Packet: <packet.SYN object at 0x000001B497C98470>
+2019-11-09 13:18:03,477 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001B497C98470>
+2019-11-09 13:18:03,478 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001B497C98470>
+2019-11-09 13:18:03,478 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001B497C98470>
+2019-11-09 13:18:03,478 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 13:18:03,479 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 13:18:03,479 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 13:18:03,479 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 13:18:03,479 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 13:18:03,479 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 13:18:03,479 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 13:38:33,072 - log - INFO - Created Packet: <packet.SYN object at 0x000001E27B0A84E0>
+2019-11-09 13:38:33,072 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001E27B0A84E0>
+2019-11-09 13:38:33,073 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001E27B0A84E0>
+2019-11-09 13:38:33,073 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001E27B0A84E0>
+2019-11-09 13:38:33,073 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 13:38:33,073 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 13:38:33,073 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 13:38:33,073 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 13:38:33,073 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 13:38:33,073 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 13:38:33,074 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 16:30:41,932 - log - INFO - Created Packet: <packet.SYN object at 0x000001D5E23584A8>
+2019-11-09 16:30:41,932 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001D5E23584A8>
+2019-11-09 16:30:41,933 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001D5E23584A8>
+2019-11-09 16:30:41,933 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001D5E23584A8>
+2019-11-09 16:30:41,933 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 16:30:41,933 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 16:30:41,933 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 16:30:41,933 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 16:30:41,933 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 16:30:41,933 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 16:30:41,934 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 16:31:45,399 - log - INFO - Created Packet: <packet.SYN object at 0x0000014AEDA884E0>
+2019-11-09 16:31:45,399 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000014AEDA884E0>
+2019-11-09 16:31:45,400 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000014AEDA884E0>
+2019-11-09 16:31:45,400 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000014AEDA884E0>
+2019-11-09 16:31:45,401 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 16:31:45,401 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 16:31:45,401 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 16:31:45,401 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 16:31:45,401 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 16:31:45,401 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 16:31:45,401 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 16:31:53,758 - log - INFO - Created Packet: <packet.SYN object at 0x000001553DD88518>
+2019-11-09 16:31:53,758 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001553DD88518>
+2019-11-09 16:31:53,759 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001553DD88518>
+2019-11-09 16:31:53,759 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001553DD88518>
+2019-11-09 16:31:53,760 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001553DD88518>
+2019-11-09 16:31:53,761 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001553DD88518>
+2019-11-09 16:32:38,269 - log - INFO - Created Packet: <packet.SYN object at 0x0000026DC55C84A8>
+2019-11-09 16:32:38,269 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000026DC55C84A8>
+2019-11-09 16:32:38,270 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000026DC55C84A8>
+2019-11-09 16:32:38,271 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000026DC55C84A8>
+2019-11-09 16:32:38,272 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000026DC55C84A8>
+2019-11-09 16:32:38,272 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000026DC55C84A8>
+2019-11-09 16:32:38,272 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 16:32:38,272 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 16:32:38,272 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 16:32:38,272 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 16:32:38,272 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 16:32:38,272 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 16:32:38,273 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 16:33:53,078 - log - INFO - Created Packet: <packet.SYN object at 0x000001F0DC4384E0>
+2019-11-09 16:33:53,078 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001F0DC4384E0>
+2019-11-09 16:33:53,079 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001F0DC4384E0>
+2019-11-09 16:33:53,079 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001F0DC4384E0>
+2019-11-09 16:33:53,080 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001F0DC4384E0>
+2019-11-09 16:33:53,080 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001F0DC4384E0>
+2019-11-09 16:33:53,081 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 16:33:53,081 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 16:33:53,081 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 16:33:53,081 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 16:33:53,081 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 16:33:53,081 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 16:33:53,081 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 16:35:44,956 - log - INFO - Created Packet: <packet.SYN object at 0x0000017FF07D8518>
+2019-11-09 16:35:44,957 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000017FF07D8518>
+2019-11-09 16:35:44,958 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000017FF07D8518>
+2019-11-09 16:35:44,958 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000017FF07D8518>
+2019-11-09 16:35:44,959 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000017FF07D8518>
+2019-11-09 16:35:44,959 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000017FF07D8518>
+2019-11-09 16:35:44,959 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 16:35:44,959 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 16:35:44,959 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 16:35:44,959 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 16:35:44,959 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 16:35:44,960 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 16:35:44,960 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 16:38:14,231 - log - INFO - Created Packet: <packet.SYN object at 0x000001EFAFF0E940>
+2019-11-09 16:38:14,231 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001EFAFF0E940>
+2019-11-09 16:38:14,232 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001EFAFF0E940>
+2019-11-09 16:38:55,512 - log - INFO - Created Packet: <packet.SYN object at 0x00000193734FD940>
+2019-11-09 16:38:55,512 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000193734FD940>
+2019-11-09 16:38:55,513 - log - INFO - Encoded Packet: <packet.SYN object at 0x00000193734FD940>
+2019-11-09 16:38:55,514 - log - INFO - Encoded Packet: <packet.SYN object at 0x00000193734FD940>
+2019-11-09 16:44:15,254 - log - INFO - Created Packet: <packet.SYN object at 0x00000173AEC9B9B0>
+2019-11-09 16:44:15,254 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000173AEC9B9B0>
+2019-11-09 16:48:57,781 - log - INFO - Created Packet: <packet.SYN object at 0x000001509DD4D978>
+2019-11-09 16:48:57,781 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001509DD4D978>
+2019-11-09 16:49:33,914 - log - INFO - Created Packet: <packet.SYN object at 0x000001ACF626B9B0>
+2019-11-09 16:49:33,914 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001ACF626B9B0>
+2019-11-09 16:50:34,950 - log - INFO - Created Packet: <packet.SYN object at 0x000001E12270D978>
+2019-11-09 16:50:34,950 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001E12270D978>
+2019-11-09 16:54:06,503 - log - INFO - Created Packet: <packet.SYN object at 0x0000023F2820B9B0>
+2019-11-09 16:54:06,503 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000023F2820B9B0>
+2019-11-09 16:57:48,348 - log - INFO - Created Packet: <packet.SYN object at 0x00000189974FB9B0>
+2019-11-09 16:57:48,348 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000189974FB9B0>
+2019-11-09 16:58:45,689 - log - INFO - Created Packet: <packet.SYN object at 0x0000023F0B27F8D0>
+2019-11-09 16:58:45,689 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000023F0B27F8D0>
+2019-11-09 16:58:45,690 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000023F0B27F8D0>
+2019-11-09 16:58:45,690 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000023F0B27F8D0>
+2019-11-09 16:58:45,691 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000023F0B27F8D0>
+2019-11-09 16:58:45,691 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000023F0B27F8D0>
+2019-11-09 16:58:45,691 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 16:58:45,691 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 16:58:45,691 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 16:58:45,691 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 16:58:45,691 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 16:58:45,691 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 16:58:45,691 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:01:28,116 - log - INFO - Created Packet: <packet.SYN object at 0x00000257650984E0>
+2019-11-09 17:01:28,116 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000257650984E0>
+2019-11-09 17:01:28,116 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000257650984E0>
+2019-11-09 17:01:28,116 - log - INFO - Encoded Packet: <packet.SYN object at 0x00000257650984E0>
+2019-11-09 17:01:28,117 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:01:28,117 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:01:28,117 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:01:28,117 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:01:28,117 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:01:28,117 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:01:28,117 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:01:39,054 - log - INFO - Created Packet: <packet.SYN object at 0x0000021A369984E0>
+2019-11-09 17:01:39,055 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000021A369984E0>
+2019-11-09 17:01:39,055 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000021A369984E0>
+2019-11-09 17:01:39,055 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000021A369984E0>
+2019-11-09 17:01:39,056 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:01:39,056 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:01:39,056 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:01:39,056 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:01:39,056 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:01:39,056 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:01:39,056 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:01:47,546 - log - INFO - Created Packet: <packet.SYN object at 0x00000230DDA084E0>
+2019-11-09 17:01:47,547 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000230DDA084E0>
+2019-11-09 17:01:47,547 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000230DDA084E0>
+2019-11-09 17:01:47,547 - log - INFO - Encoded Packet: <packet.SYN object at 0x00000230DDA084E0>
+2019-11-09 17:01:47,548 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:01:47,548 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:01:47,548 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:01:47,548 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:01:47,548 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:01:47,548 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:01:47,548 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:03:04,874 - log - INFO - Created Packet: <packet.SYN object at 0x000001C18773B9B0>
+2019-11-09 17:03:04,875 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001C18773B9B0>
+2019-11-09 17:03:04,875 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001C18773B9B0>
+2019-11-09 17:03:04,875 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001C18773B9B0>
+2019-11-09 17:03:04,876 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:03:04,876 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:03:04,876 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:03:04,876 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:03:04,876 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:03:04,876 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:03:04,876 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:03:20,193 - log - INFO - Created Packet: <packet.SYN object at 0x000001DDBDB3D940>
+2019-11-09 17:03:20,193 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001DDBDB3D940>
+2019-11-09 17:03:20,194 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001DDBDB3D940>
+2019-11-09 17:03:20,194 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001DDBDB3D940>
+2019-11-09 17:03:20,194 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:03:20,194 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:03:20,194 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:03:20,194 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:03:20,194 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:03:20,194 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:03:20,194 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:04:54,345 - log - INFO - Created Packet: <packet.SYN object at 0x000001B168AED940>
+2019-11-09 17:04:54,346 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001B168AED940>
+2019-11-09 17:04:54,346 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001B168AED940>
+2019-11-09 17:04:54,346 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001B168AED940>
+2019-11-09 17:04:54,347 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:04:54,347 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:04:54,347 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:04:54,347 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:04:54,347 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:04:54,347 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:04:54,347 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:05:02,130 - log - INFO - Created Packet: <packet.SYN object at 0x0000015EFD72E978>
+2019-11-09 17:05:02,130 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000015EFD72E978>
+2019-11-09 17:05:02,131 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000015EFD72E978>
+2019-11-09 17:05:02,131 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000015EFD72E978>
+2019-11-09 17:05:02,131 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:05:02,131 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:05:02,131 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:05:02,131 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:05:02,131 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:05:02,132 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:05:02,132 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:09:06,312 - log - INFO - Created Packet: <packet.SYN object at 0x000002B56707E940>
+2019-11-09 17:09:06,312 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002B56707E940>
+2019-11-09 17:09:06,313 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002B56707E940>
+2019-11-09 17:09:06,313 - log - INFO - Encoded Packet: <packet.SYN object at 0x000002B56707E940>
+2019-11-09 17:09:06,313 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:09:06,313 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:09:06,314 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:09:06,314 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:09:06,314 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:09:06,314 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:09:06,314 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:09:26,341 - log - INFO - Created Packet: <packet.SYN object at 0x000002234974E908>
+2019-11-09 17:09:26,342 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002234974E908>
+2019-11-09 17:09:26,342 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002234974E908>
+2019-11-09 17:09:26,342 - log - INFO - Encoded Packet: <packet.SYN object at 0x000002234974E908>
+2019-11-09 17:09:26,343 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:09:26,343 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:09:26,343 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:09:26,343 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:09:26,343 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:09:26,343 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:09:26,343 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:10:39,018 - log - INFO - Created Packet: <packet.SYN object at 0x000002BEB949D978>
+2019-11-09 17:10:39,018 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002BEB949D978>
+2019-11-09 17:10:39,019 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002BEB949D978>
+2019-11-09 17:10:39,019 - log - INFO - Encoded Packet: <packet.SYN object at 0x000002BEB949D978>
+2019-11-09 17:10:39,020 - log - INFO - Entered State: State('init', identifier='init', value='init', initial=True)
+2019-11-09 17:10:39,020 - log - INFO - Entered State: State('synsent', identifier='synsent', value='synsent', initial=False)
+2019-11-09 17:10:39,020 - log - INFO - Entered State: State('established', identifier='established', value='established', initial=False)
+2019-11-09 17:10:39,020 - log - INFO - Entered State: State('finwait1', identifier='finwait1', value='finwait1', initial=False)
+2019-11-09 17:10:39,020 - log - INFO - Entered State: State('finwait2', identifier='finwait2', value='finwait2', initial=False)
+2019-11-09 17:10:39,020 - log - INFO - Entered State: State('timewait', identifier='timewait', value='timewait', initial=False)
+2019-11-09 17:10:39,020 - log - INFO - Entered State: State('closed', identifier='closed', value='closed', initial=False)
+2019-11-09 17:38:02,492 - log - INFO - Created Packet: <packet.SYN object at 0x000002DA1D7294E0>
+2019-11-09 17:38:02,492 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002DA1D7294E0>
+2019-11-09 17:38:02,493 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002DA1D7294E0>
+2019-11-09 17:38:02,493 - log - INFO - Encoded Packet: <packet.SYN object at 0x000002DA1D7294E0>
+2019-11-09 17:38:28,810 - log - INFO - Created Packet: <packet.SYN object at 0x0000018137D69550>
+2019-11-09 17:38:28,810 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000018137D69550>
+2019-11-09 17:38:28,810 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000018137D69550>
+2019-11-09 17:38:28,811 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000018137D69550>
+2019-11-09 17:38:38,132 - log - INFO - Created Packet: <packet.SYN object at 0x000002073EB99550>
+2019-11-09 17:38:38,133 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002073EB99550>
+2019-11-09 17:38:38,133 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002073EB99550>
+2019-11-09 17:38:38,133 - log - INFO - Encoded Packet: <packet.SYN object at 0x000002073EB99550>
+2019-11-09 17:39:16,442 - log - INFO - Created Packet: <packet.SYN object at 0x0000026B1BC1C5C0>
+2019-11-09 17:39:16,442 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000026B1BC1C5C0>
+2019-11-09 17:39:16,443 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000026B1BC1C5C0>
+2019-11-09 17:39:16,443 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000026B1BC1C5C0>
+2019-11-09 17:49:42,052 - log - INFO - Created Packet: <packet.SYN object at 0x000002190D0DCA90>
+2019-11-09 17:49:42,052 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002190D0DCA90>
+2019-11-09 17:49:42,053 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002190D0DCA90>
+2019-11-09 17:51:32,663 - log - INFO - Created Packet: <packet.SYN object at 0x000001DFB608CA20>
+2019-11-09 17:51:32,663 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001DFB608CA20>
+2019-11-09 17:51:32,664 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001DFB608CA20>
+2019-11-09 17:51:32,664 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001DFB608CA20>
+2019-11-09 17:51:59,451 - log - INFO - Created Packet: <packet.SYN object at 0x0000028245C1CA20>
+2019-11-09 17:51:59,451 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000028245C1CA20>
+2019-11-09 17:51:59,452 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000028245C1CA20>
+2019-11-09 17:52:50,722 - log - INFO - Created Packet: <packet.SYN object at 0x0000019AABB5CA20>
+2019-11-09 17:52:50,722 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000019AABB5CA20>
+2019-11-09 17:52:50,723 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000019AABB5CA20>
+2019-11-09 17:52:50,723 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000019AABB5CA20>
+2019-11-09 17:53:06,358 - log - INFO - Created Packet: <packet.SYN object at 0x0000024D59F89470>
+2019-11-09 17:53:06,358 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000024D59F89470>
+2019-11-09 17:53:06,359 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000024D59F89470>
+2019-11-09 17:53:06,359 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000024D59F89470>
+2019-11-09 17:53:42,425 - log - INFO - Created Packet: <packet.SYN object at 0x0000021CF025C9E8>
+2019-11-09 17:53:42,425 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000021CF025C9E8>
+2019-11-09 17:53:42,426 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000021CF025C9E8>
+2019-11-09 17:53:42,426 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000021CF025C9E8>
+2019-11-09 17:54:05,708 - log - INFO - Created Packet: <packet.SYN object at 0x000001BF43469470>
+2019-11-09 17:54:05,708 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001BF43469470>
+2019-11-09 17:54:05,709 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001BF43469470>
+2019-11-09 17:54:05,709 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001BF43469470>
+2019-11-09 17:54:19,439 - log - INFO - Created Packet: <packet.SYN object at 0x0000017CBAAA9470>
+2019-11-09 17:54:19,439 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000017CBAAA9470>
+2019-11-09 17:54:19,440 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000017CBAAA9470>
+2019-11-09 17:54:19,440 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000017CBAAA9470>
+2019-11-09 18:04:28,765 - log - INFO - Created Packet: <packet.SYN object at 0x000001A1AD1AC978>
+2019-11-09 18:04:28,765 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001A1AD1AC978>
+2019-11-09 18:04:42,625 - log - INFO - Created Packet: <packet.SYN object at 0x0000019F849BE8D0>
+2019-11-09 18:04:42,625 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000019F849BE8D0>
+2019-11-09 18:04:55,397 - log - INFO - Created Packet: <packet.SYN object at 0x0000024ABB84E978>
+2019-11-09 18:04:55,397 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000024ABB84E978>
+2019-11-09 18:05:58,325 - log - INFO - Created Packet: <packet.SYN object at 0x000001E7DC13E940>
+2019-11-09 18:05:58,325 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001E7DC13E940>
+2019-11-09 18:06:10,243 - log - INFO - Created Packet: <packet.SYN object at 0x0000019466D3C978>
+2019-11-09 18:06:10,243 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000019466D3C978>
+2019-11-09 18:06:10,244 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000019466D3C978>
+2019-11-09 18:06:10,244 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000019466D3C978>
+2019-11-09 18:06:53,489 - log - INFO - Created Packet: <packet.SYN object at 0x000001B8F91594E0>
+2019-11-09 18:06:53,489 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001B8F91594E0>
+2019-11-09 18:06:53,490 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001B8F91594E0>
+2019-11-09 18:06:53,490 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001B8F91594E0>
+2019-11-09 18:07:29,162 - log - INFO - Created Packet: <packet.SYN object at 0x000001F844B8F978>
+2019-11-09 18:07:29,162 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001F844B8F978>
+2019-11-09 18:07:29,163 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001F844B8F978>
+2019-11-09 18:07:29,163 - log - INFO - Encoded Packet: <packet.SYN object at 0x000001F844B8F978>
+2019-11-09 18:09:39,520 - log - INFO - Created Packet: <packet.SYN object at 0x000001B25489E978>
+2019-11-09 18:09:39,520 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001B25489E978>
+2019-11-09 18:09:55,444 - log - INFO - Created Packet: <packet.SYN object at 0x000001AB4D2AE908>
+2019-11-09 18:09:55,445 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001AB4D2AE908>
+2019-11-09 18:09:59,685 - log - INFO - Created Packet: <packet.SYN object at 0x0000025C30D1E8D0>
+2019-11-09 18:09:59,685 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000025C30D1E8D0>
+2019-11-09 18:10:09,480 - log - INFO - Created Packet: <packet.SYN object at 0x00000251A953E940>
+2019-11-09 18:10:09,480 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000251A953E940>
+2019-11-09 18:10:17,045 - log - INFO - Created Packet: <packet.SYN object at 0x000001EA3E47F940>
+2019-11-09 18:10:17,045 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001EA3E47F940>
+2019-11-09 18:10:45,506 - log - INFO - Created Packet: <packet.SYN object at 0x000001E4285CF8D0>
+2019-11-09 18:10:45,507 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001E4285CF8D0>
+2019-11-09 18:11:13,812 - log - INFO - Created Packet: <packet.SYN object at 0x0000013C64E5E940>
+2019-11-09 18:11:13,812 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000013C64E5E940>
+2019-11-09 18:11:22,166 - log - INFO - Created Packet: <packet.SYN object at 0x00000205604AE940>
+2019-11-09 18:11:22,166 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000205604AE940>
+2019-11-09 18:11:32,769 - log - INFO - Created Packet: <packet.SYN object at 0x0000023C08CFE940>
+2019-11-09 18:11:32,769 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000023C08CFE940>
+2019-11-09 18:12:09,665 - log - INFO - Created Packet: <packet.SYN object at 0x0000019ED6ABE978>
+2019-11-09 18:12:09,665 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000019ED6ABE978>
+2019-11-09 18:12:09,666 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000019ED6ABE978>
+2019-11-09 18:12:24,670 - log - INFO - Created Packet: <packet.SYN object at 0x00000185C1BCE978>
+2019-11-09 18:12:24,671 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000185C1BCE978>
+2019-11-09 18:12:24,671 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000185C1BCE978>
+2019-11-09 18:14:00,820 - log - INFO - Created Packet: <packet.SYN object at 0x00000139233194A8>
+2019-11-09 18:14:00,820 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000139233194A8>
+2019-11-09 18:14:00,821 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000139233194A8>
+2019-11-09 18:15:40,181 - log - INFO - Created Packet: <packet.SYN object at 0x00000285DED79470>
+2019-11-09 18:15:40,181 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000285DED79470>
+2019-11-09 18:15:40,182 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000285DED79470>
+2019-11-09 18:15:50,391 - log - INFO - Created Packet: <packet.SYN object at 0x000001822E5F9400>
+2019-11-09 18:15:50,391 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001822E5F9400>
+2019-11-09 18:15:50,392 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001822E5F9400>
+2019-11-09 18:16:18,961 - log - INFO - Created Packet: <packet.SYN object at 0x000002116BF19470>
+2019-11-09 18:16:18,961 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002116BF19470>
+2019-11-09 18:16:18,962 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000002116BF19470>
+2019-11-09 18:16:30,500 - log - INFO - Created Packet: <packet.SYN object at 0x0000018C8B4B9470>
+2019-11-09 18:16:30,500 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000018C8B4B9470>
+2019-11-09 18:16:30,501 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000018C8B4B9470>
+2019-11-09 18:16:58,139 - log - INFO - Created Packet: <packet.SYN object at 0x000001ED90A99438>
+2019-11-09 18:16:58,140 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001ED90A99438>
+2019-11-09 18:16:58,140 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001ED90A99438>
+2019-11-09 18:20:40,690 - log - INFO - Created Packet: <packet.SYN object at 0x000001C8D857F978>
+2019-11-09 18:20:40,690 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001C8D857F978>
+2019-11-09 18:20:40,691 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001C8D857F978>
+2019-11-09 18:21:05,072 - log - INFO - Created Packet: <packet.SYN object at 0x00000213E613E940>
+2019-11-09 18:21:05,072 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000213E613E940>
+2019-11-09 18:21:05,073 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000213E613E940>
+2019-11-09 18:22:26,740 - log - INFO - Created Packet: <packet.SYN object at 0x000002D0D8C0F940>
+2019-11-09 18:22:26,740 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000002D0D8C0F940>
+2019-11-09 18:23:17,100 - log - INFO - Created Packet: <packet.SYN object at 0x000001ACC011E908>
+2019-11-09 18:23:17,100 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001ACC011E908>
+2019-11-09 18:23:26,803 - log - INFO - Created Packet: <packet.SYN object at 0x00000292775EF940>
+2019-11-09 18:23:26,803 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000292775EF940>
+2019-11-09 18:23:47,583 - log - INFO - Created Packet: <packet.SYN object at 0x00000200C6FEE978>
+2019-11-09 18:23:47,583 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000200C6FEE978>
+2019-11-09 18:24:44,790 - log - INFO - Created Packet: <packet.SYN object at 0x000001CA99FEF898>
+2019-11-09 18:24:44,790 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001CA99FEF898>
+2019-11-09 18:25:21,516 - log - INFO - Created Packet: <packet.SYN object at 0x00000255C02AF978>
+2019-11-09 18:25:21,516 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000255C02AF978>
+2019-11-09 18:26:19,920 - log - INFO - Created Packet: <packet.SYN object at 0x0000023DFF58E978>
+2019-11-09 18:26:19,920 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000023DFF58E978>
+2019-11-09 18:28:01,955 - log - INFO - Created Packet: <packet.SYN object at 0x0000020435C7F908>
+2019-11-09 18:28:01,955 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000020435C7F908>
+2019-11-09 18:28:33,145 - log - INFO - Created Packet: <packet.SYN object at 0x000001DFB15BF908>
+2019-11-09 18:28:33,145 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001DFB15BF908>
+2019-11-09 18:30:43,877 - log - INFO - Created Packet: <packet.SYN object at 0x00000211B794F8D0>
+2019-11-09 18:30:43,877 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000211B794F8D0>
+2019-11-09 18:31:50,799 - log - INFO - Created Packet: <packet.SYN object at 0x000001FAD29EF908>
+2019-11-09 18:31:50,799 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001FAD29EF908>
+2019-11-09 18:33:01,127 - log - INFO - Created Packet: <packet.SYN object at 0x0000025D3FB9F908>
+2019-11-09 18:33:01,127 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000025D3FB9F908>
+2019-11-09 18:33:01,128 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000025D3FB9F908>
+2019-11-09 18:33:28,036 - log - INFO - Created Packet: <packet.SYN object at 0x000001C547FAF908>
+2019-11-09 18:33:28,036 - log - INFO - Created SYN Packet: <packet.SYN object at 0x000001C547FAF908>
+2019-11-09 18:33:28,037 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001C547FAF908>
+2019-11-09 18:33:28,037 - log - INFO - Inserted Checksum: <packet.SYN object at 0x000001C547FAF908>
+2019-11-09 18:33:35,310 - log - INFO - Created Packet: <packet.SYN object at 0x0000021824C2E908>
+2019-11-09 18:33:35,310 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000021824C2E908>
+2019-11-09 18:33:35,311 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000021824C2E908>
+2019-11-09 18:33:35,312 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000021824C2E908>
+2019-11-09 18:33:43,791 - log - INFO - Created Packet: <packet.SYN object at 0x0000019E4815F898>
+2019-11-09 18:33:43,792 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000019E4815F898>
+2019-11-09 18:33:43,792 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000019E4815F898>
+2019-11-09 18:34:10,767 - log - INFO - Created Packet: <packet.SYN object at 0x0000023CFBA0F8D0>
+2019-11-09 18:34:10,767 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000023CFBA0F8D0>
+2019-11-09 18:34:10,768 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000023CFBA0F8D0>
+2019-11-09 18:35:13,335 - log - INFO - Created Packet: <packet.SYN object at 0x0000022FD8D6E940>
+2019-11-09 18:35:13,335 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000022FD8D6E940>
+2019-11-09 18:35:13,336 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000022FD8D6E940>
+2019-11-09 18:35:13,336 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000022FD8D6E940>
+2019-11-09 18:35:37,536 - log - INFO - Created Packet: <packet.SYN object at 0x0000023764D8D898>
+2019-11-09 18:35:37,536 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000023764D8D898>
+2019-11-09 18:35:37,537 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000023764D8D898>
+2019-11-09 18:35:37,537 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000023764D8D898>
+2019-11-09 18:35:44,052 - log - INFO - Created Packet: <packet.SYN object at 0x0000021333308438>
+2019-11-09 18:35:44,052 - log - INFO - Created SYN Packet: <packet.SYN object at 0x0000021333308438>
+2019-11-09 18:35:44,053 - log - INFO - Inserted Checksum: <packet.SYN object at 0x0000021333308438>
+2019-11-09 18:35:44,054 - log - INFO - Encoded Packet: <packet.SYN object at 0x0000021333308438>
+2019-11-09 19:03:45,469 - log - INFO - Created Packet: <packet.SYN object at 0x00000201BBBE8438>
+2019-11-09 19:03:45,469 - log - INFO - Created SYN Packet: <packet.SYN object at 0x00000201BBBE8438>
+2019-11-09 19:03:45,470 - log - INFO - Inserted Checksum: <packet.SYN object at 0x00000201BBBE8438>
+2019-11-09 19:03:45,470 - log - INFO - Encoded Packet: <packet.SYN object at 0x00000201BBBE8438>
