@@ -1,6 +1,8 @@
+# Kelsey McBratney
+# Computer Networking A365
+# TCP Over UDP Client
 import argparse
 import re
-from log import *
 from states import *
 
 parser = argparse.ArgumentParser(description='TCP over UDP Implementation')
@@ -16,7 +18,7 @@ args = parser.parse_args()
 
 addressFormat = re.compile('^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$')
 
-#if args.a != addressFormat:
+#if args.a != addressFormat:  # TODO
 #    logger.error('Invalid Address: %s', args.a)
 #    exit(1)
 
@@ -38,4 +40,5 @@ address = args.a
 filename = args.f
 mode = args.m
 
+logger.info("Starting Session")
 StateHandler(address, serverport, clientport, filename)
