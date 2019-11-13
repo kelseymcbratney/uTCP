@@ -2,7 +2,6 @@
 # Computer Networking A365
 # TCP Over UDP Client
 from statemachine import StateMachine, State
-from bitstring import pack, BitArray, BitStream
 from packet import *
 from log import *
 import socket
@@ -75,8 +74,6 @@ class StateHandler:
                 packet = SYNACK()
                 packet.binary = incbits
                 packet.decode()
-                print("incoming header")
-                print(packet.header)
                 self.previousSeqnum = packet.header['seqnum']
                 self.previousACK = packet.header['acknum']
                 self.windowSize = packet.header['window']
@@ -123,7 +120,6 @@ class StateHandler:
                 packet.header['acknum'] = self.previousACK + 1
                 self.previousACK = packet.header['acknum']
 
-
                 self.UDPsocket.sendto(packet.encode().pbytes.bytes, (self.adr, self.sp))  # SEND ACK for SYN-ACK
                 logger.info("Sending ACK: %s", packet.header)
                 self.states.run('cycle')
@@ -132,6 +128,13 @@ class StateHandler:
                 self.receive()
                 databytes = self.file.read(1000)
                 if len(databytes) == 0:
+                    packet = FIN()
+                    packet.header['srcport'] = self.cp
+                    packet.header['dstport'] = self.sp
+                    packet.header['dataoffset'] = 5
+                    packet.header['seqnum'] = self.previousACK
+                    packet.header['acknum'] = self.previousSentSeqnum
+                    self.UDPsocket.sendto(packet.encode().pbytes.bytes, (self.adr, self.sp))
                     logger.info("Sending FIN")
                     self.states.run('cycle')
                     break
@@ -144,11 +147,6 @@ class StateHandler:
                 packet.data = databytes
                 self.UDPsocket.sendto(packet.encode().pbytes.bytes, (self.adr, self.sp))  # SEND DATA
                 logger.info("Sending Data: %s", packet.header)
-
-
-                #  SEND DATA HERE
-
-
 
 
             elif self.states.is_finwait1 is True:  # FINWAIT1 STATE
