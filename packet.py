@@ -47,20 +47,20 @@ class Packet:
  \
         # Binary of total Header
         self.binary = None
-        self.bytes = None
+        self.pbytes = None
         logger.info('Created Packet: %s', self)
 
     def encode(self):
-        self.bytes = pack(self.bitfmt, **self.header)  # Fake Packet for Checksum to be made
-        self.binary = self.bytes.bin
+        self.pbytes = pack(self.bitfmt, **self.header)  # Fake Packet for Checksum to be made
+        self.binary = self.pbytes.bin
         self.header['checksum'] = self.calc_checksum()
-        self.bytes = pack(self.bitfmt, **self.header)  # Final Packet
-        self.binary = self.bytes.bin
-        logger.info('Encoded Packet: %s', self)
+        self.pbytes = pack(self.bitfmt, **self.header)  # Final Packet
+        self.binary = self.pbytes.bin
+        logger.info('Encoded Packet: %s Checksum: %s', self, self.header['checksum'])
         return self
 
     def calc_checksum(self):
-        self.header['checksum'] = Checksum16.calc(self.bytes.bytes)
+        self.header['checksum'] = Checksum16.calc(self.pbytes.bytes)
         logger.info('Inserted Checksum: %s', self)
         return self.header['checksum']
 
@@ -87,23 +87,23 @@ class Packet:
 class DATA(Packet):
     def __init__(self):
         Packet.__init__(self)
-        self.data = None
+        self.data = BitStream()
         logger.info('Created DATA Packet: %s', self)
 
     def encode(self):
-        self.binary = pack(self.bitfmt, **self.header).bin
-        self.binary += self.data
+        self.pbytes = pack(self.bitfmt, **self.header)  # Fake Packet for Checksum to be made
+        self.pbytes.append(self.data)
         self.header['checksum'] = self.calc_checksum()
-        self.binary = self.binary[:128] + BitArray(uint=self.header['checksum'], length=16).bin + self.binary[144:]
-        logger.info('Encoded DATA Packet: %s', self)
+        self.pbytes = pack(self.bitfmt, **self.header)  # Final Packet with Checksum and Data
+        self.pbytes.append(self.data)
+        self.binary = self.pbytes.bin
+        logger.info('Encode DATA Packet: %s Checksum: %s', self, self.header['checksum'])
         return self
 
     def calc_checksum(self):
-        self.header['data'] = 0
-        self.binary = pack(self.bitfmt, **self.header).bin + self.data
-        self.binary = self.binary[:128] + BitArray(uint=self.header['checksum'], length=16).bin + self.binary[144:]
-        logger.info('Encoded DATA Packet: %s', self)
-        pass
+        self.header['checksum'] = Checksum16.calc(self.pbytes.bytes)
+        logger.info('Inserted Checksum: %s', self)
+        return self.header['checksum']
 
 
 class ACK(Packet):

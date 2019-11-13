@@ -51,21 +51,25 @@ class StateHandler:
         self.adr = adr
         self.sp = sp
         self.cp = cp
-        self.fn = open(fn, 'rb')
+        self.file = open(fn, 'rb')
         self.TIMEOUT = 5
         self.UDPsocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.UDPsocket.settimeout(self.TIMEOUT)
+        self.UDPsocket.bind(('', self.cp))
         self.previousSeqnum = 0
         self.previousACK = 0
+        self.previousSentACK = 0
+        self.previousSentSeqnum = 0
         self.windowSize = 0
 
         self.run()
 
     def receive(self):
-        (incpacket, (self.adr, self.sp)) = self.UDPsocket.recvfrom(2048)
+        (incpacket, (adr, sp)) = self.UDPsocket.recvfrom(2048)
+        logger.info("INCOMING RAW BYTES: %s", incpacket)
         incbits = BitStream(incpacket)
         incbits = incbits.bin
-        print("incoming bits: " + incbits)
+        logger.info("INCOMING RAW BITS: %s", incbits)
         if incbits[110] == '1':  # SYN bit
             if incbits[107] == '1':  # ACK Bit
                 packet = SYNACK()
@@ -76,9 +80,7 @@ class StateHandler:
                 self.previousSeqnum = packet.header['seqnum']
                 self.previousACK = packet.header['acknum']
                 self.windowSize = packet.header['window']
-                self.sp = packet.header['srcport']
-                self.cp = packet.header['dstport']
-                logger.info("Received ACK")
+                logger.info("Received (SYN)ACK: %s", packet.header)
                 return packet
         elif incbits[111] == '1':  # FIN
             if incbits[107] == '1':  # ACK
@@ -87,42 +89,67 @@ class StateHandler:
                 packet.decode()
                 return packet
         elif incbits[107] == '1':  # ACK (Data)
-            pass
+            packet = Packet()
+            packet.binary = incbits
+            packet.decode()
+            self.previousSeqnum = packet.header['seqnum']
+            self.previousACK = packet.header['acknum']
+            logger.info("Received ACK: %s", packet.header)
+            return packet
 
     def run(self):
         time.sleep(1)
         while not self.states.is_complete:
             if self.states.is_init is True:  # SEND SYN PACKET (Default) -- SEND SYN
                 packet = SYN()
-                packet.header['srcport'] = self.sp
-                packet.header['dstport'] = self.cp
+                packet.header['srcport'] = self.cp
+                packet.header['dstport'] = self.sp
                 packet.header['seqnum'] = random.randint(1, 50000)
+                self.previousSentSeqnum = packet.header['seqnum']
                 packet.header['dataoffset'] = 5
 
-                self.UDPsocket.sendto(packet.encode().bytes.bytes, (self.adr, self.sp))
-                logger.info("Sending SYN")
+                self.UDPsocket.sendto(packet.encode().pbytes.bytes, (self.adr, self.sp))
+                logger.info("Sending SYN: %s", packet.header)
                 self.states.run('cycle')
-            elif self.states.is_synsent is True:  # SYNSENT STATE
+            elif self.states.is_synsent is True:  # SYNSENT STATE -- SENDS ACK for (SYN-ACK)
                 rcvpacket = self.receive()  # RECEIVE SYN-ACK
 
                 packet = ACK()
-                packet.header['srcport'] = self.sp
-                packet.header['dstport'] = self.cp
+                packet.header['srcport'] = self.cp
+                packet.header['dstport'] = self.sp
                 packet.header['dataoffset'] = 5
-                packet.header['seqnum'] = self.previousSeqnum + 1
+                packet.header['seqnum'] = self.previousSentSeqnum + 1
+                self.previousSentSeqnum = packet.header['seqnum']
                 packet.header['acknum'] = self.previousACK + 1
+                self.previousACK = packet.header['acknum']
 
-                self.UDPsocket.sendto(packet.encode().bytes.bytes, (self.adr, self.sp))  # SEND ACK for SYN-ACK
-                logger.info("Sending ACK")
+
+                self.UDPsocket.sendto(packet.encode().pbytes.bytes, (self.adr, self.sp))  # SEND ACK for SYN-ACK
+                logger.info("Sending ACK: %s", packet.header)
                 self.states.run('cycle')
 
             elif self.states.is_established is True:  # ESTABLISHED STATE
+                self.receive()
+                databytes = self.file.read(1000)
+                if len(databytes) == 0:
+                    logger.info("Sending FIN")
+                    self.states.run('cycle')
+                    break
+                packet = DATA()
+                packet.header['srcport'] = self.cp
+                packet.header['dstport'] = self.sp
+                packet.header['dataoffset'] = 5
+                packet.header['seqnum'] = self.previousACK
+                packet.header['acknum'] = self.previousSentSeqnum + len(databytes)
+                packet.data = databytes
+                self.UDPsocket.sendto(packet.encode().pbytes.bytes, (self.adr, self.sp))  # SEND DATA
+                logger.info("Sending Data: %s", packet.header)
+
 
                 #  SEND DATA HERE
 
-                #  SEND FIN
 
-                self.states.run('cycle')
+
 
             elif self.states.is_finwait1 is True:  # FINWAIT1 STATE
                 self.states.run('cycle')
