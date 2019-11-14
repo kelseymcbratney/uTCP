@@ -16,11 +16,11 @@ parser.add_argument("-m", help="Mode (r = Read from Server, w = Write to Server)
 
 args = parser.parse_args()
 
-addressFormat = re.compile('^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$')
+addressFormat = re.compile('\d{1,3}(\.\d{1,3}){3}')
 
-#if args.a != addressFormat:  # TODO
-#    logger.error('Invalid Address: %s', args.a)
-#    exit(1)
+if addressFormat.match(args.a) is None:  # TODO
+    logger.error('Invalid Address: %s', args.a)
+    exit(1)
 
 if int(args.cp) <= 5000 or int(args.cp) >= 65535:  # Checks if Server Port is in Range, if not exit(1)
     logger.error('Invalid Port Number: %s', args.cp)

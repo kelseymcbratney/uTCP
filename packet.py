@@ -5,7 +5,8 @@ from bitstring import pack, BitArray, BitStream
 from crccheck.checksum import Checksum16
 from log import *
 
-class Packet:
+
+class Packet:  # Creates Base Class that will hold all of the Packet Information in a Dict
     def __init__(self):
         self.header = {
             'srcport': 0,  # 16 Bits 0-16
@@ -45,26 +46,37 @@ class Packet:
                       "uint:16=checksum," \
                       "uint:16=urgtptr," \
  \
-        # Binary of total Header
+            # Binary of total Header
         self.binary = None
         self.pbytes = None
         logger.info('Created Packet: %s', self)
 
-    def encode(self):
+    def encode(self):  # Inserts a Checksum and Encodes the Packet to be sent
         self.pbytes = pack(self.bitfmt, **self.header)  # Fake Packet for Checksum to be made
         self.binary = self.pbytes.bin
         self.header['checksum'] = self.calc_checksum()
         self.pbytes = pack(self.bitfmt, **self.header)  # Final Packet
         self.binary = self.pbytes.bin
         logger.info('Encoded Packet: %s Checksum: %s', self, self.header['checksum'])
-        return self
+        return self.pbytes.bytes
 
-    def calc_checksum(self):
+    def calc_checksum(self):  # Calculates Checksum, saves to Packet['checksum']
         self.header['checksum'] = Checksum16.calc(self.pbytes.bytes)
         logger.info('Inserted Checksum: %s', self)
         return self.header['checksum']
 
-    def decode(self):
+    def check_checksum(self):  # Takes Incoming Packet and Verifies Checksum is Correct
+        incoming_checksum = self.header['checksum']
+        self.header['checksum'] = 0
+        self.pbytes = pack(self.bitfmt, **self.header)  # Fake Packet for Checksum to be made
+        self.binary = self.pbytes.bin
+        self.header['checksum'] = self.calc_checksum()
+        if incoming_checksum == self.header['checksum']:
+            return True  # If Checksum is Correct return True
+        else:
+            return False  # If Checksum is Incorrect return False
+
+    def decode(self):  # Takes a Incoming Packet and Decodes Binary into data for Packer.header
         self.header['srcport'] = int(self.binary[0:16], 2)
         self.header['dstport'] = int(self.binary[16:32], 2)
         self.header['seqnum'] = int(self.binary[32:64], 2)
@@ -84,13 +96,13 @@ class Packet:
         return self
 
 
-class DATA(Packet):
+class DATA(Packet):  # Inherits from Packet Class, Adds Additional Data Field. Changes Checksum Routine
     def __init__(self):
         Packet.__init__(self)
         self.data = BitStream()
         logger.info('Created DATA Packet: %s', self)
 
-    def encode(self):
+    def encode(self):  # Inserts a Checksum and Encodes the Packet to be sent
         self.pbytes = pack(self.bitfmt, **self.header)  # Fake Packet for Checksum to be made
         self.pbytes.append(self.data)
         self.header['checksum'] = self.calc_checksum()
@@ -98,29 +110,29 @@ class DATA(Packet):
         self.pbytes.append(self.data)
         self.binary = self.pbytes.bin
         logger.info('Encode DATA Packet: %s Checksum: %s', self, self.header['checksum'])
-        return self
+        return self.pbytes.bytes
 
-    def calc_checksum(self):
+    def calc_checksum(self):  # Calculates Checksum, saves to Packet['checksum']
         self.header['checksum'] = Checksum16.calc(self.pbytes.bytes)
         logger.info('Inserted Checksum: %s', self)
         return self.header['checksum']
 
 
-class ACK(Packet):
+class ACK(Packet):  # Inherits from Packet, Sets Flag for ACK Type Packet
     def __init__(self):
         Packet.__init__(self)
         self.header['ack'] = 1
         logger.info('Created ACK Packet: %s', self)
 
 
-class SYN(Packet):
+class SYN(Packet):  # Inherits from Packet, Sets Flag for SYN Type Packet
     def __init__(self):
         Packet.__init__(self)
         self.header['syn'] = 1
         logger.info('Created SYN Packet: %s', self)
 
 
-class SYNACK(Packet):
+class SYNACK(Packet):  # Inherits from Packet, Sets Flag for SYNACK Type Packet
     def __init__(self):
         Packet.__init__(self)
         self.header['syn'] = 1
@@ -128,40 +140,16 @@ class SYNACK(Packet):
         logger.info('Created SYN-ACK Packet: %s', self)
 
 
-class FIN(Packet):
+class FIN(Packet):  # Inherits from Packet, Sets Flag for FIN Type Packet
     def __init__(self):
         Packet.__init__(self)
         self.header['fin'] = 1
         logger.info('Created FIN Packet: %s', self)
 
 
-class FINACK(Packet):
+class FINACK(Packet):  # Inherits from Packet, Sets Flag for FINACK Type Packet
     def __init__(self):
         Packet.__init__(self)
         self.header['fin'] = 1
         self.header['ack'] = 1
         logger.info('Created FIN-ACK Packet: %s', self)
-
-
-class CONVERT(Packet):
-    def __init__(self, binary):
-        Packet.__init__(self)
-        self.header['srcport'] = int(binary[0:16], 2)
-        self.header['dstport'] = int(binary[16:32], 2)
-        self.header['seqnum'] = int(binary[32:64], 2)
-        self.header['acknum'] = int(binary[64:96], 2)
-        self.header['dataoffset'] = int(binary[96:100], 2)
-        self.header['reserved'] = int(binary[100:106], 2)
-        self.header['urg'] = int(binary[106], 2)
-        self.header['ack'] = int(binary[107], 2)
-        self.header['psh'] = int(binary[108], 2)
-        self.header['rst'] = int(binary[109], 2)
-        self.header['syn'] = int(binary[110], 2)
-        self.header['fin'] = int(binary[111], 2)
-        self.header['window'] = int(binary[112:128], 2)
-        self.header['checksum'] = int(binary[128:144], 2)
-        self.header['urgtptr'] = int(binary[144:160], 2)
-
-
-
-
