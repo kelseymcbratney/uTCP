@@ -2,6 +2,7 @@
 # Computer Networking A365
 # TCP Over UDP Client
 from statemachine import StateMachine, State
+from window import *
 from packet import *
 from log import *
 import socket
@@ -52,6 +53,8 @@ class StateHandler:
         self.cp = cp
         self.file = open(fn, 'rb')
         self.TIMEOUT = 5
+        self.MAXTIMEOUT = 5
+        self.TIMEOUTATTEMPT = 0
         self.UDPsocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.UDPsocket.settimeout(self.TIMEOUT)
         self.UDPsocket.bind(('', self.cp))
@@ -65,7 +68,18 @@ class StateHandler:
         self.run()  # Run Method on Start
 
     def receive(self):  # Receives and Handles all Incoming Packets
-        (incpacket, (adr, sp)) = self.UDPsocket.recvfrom(2048)
+
+        try:
+            (incpacket, (adr, sp)) = self.UDPsocket.recvfrom(2048)
+            self.TIMEOUTATTEMPT = 0
+        except socket.timeout:
+            logger.info("Timed Out Receiving Data, Incrementing Timeout: %s", self.TIMEOUTATTEMPT)
+            self.TIMEOUTATTEMPT += 1
+            if self.TIMEOUTATTEMPT >= self.MAXTIMEOUT:
+                logger.info("Max Timeout Attempts Occurred - CLOSING CLIENT", self.TIMEOUTATTEMPT)
+                exit(1)
+            return
+
         if sp != self.sp:
             logger.info("Received Data from Wrong Port: %s - DISCARDING PACKET", sp)
             return
@@ -109,8 +123,14 @@ class StateHandler:
             return packet
 
     def send(self, packet):
-        self.UDPsocket.sendto(packet.encode(), (self.adr, self.sp))
-        pass
+        try:
+            self.UDPsocket.sendto(packet.encode(), (self.adr, self.sp))
+            self.TIMEOUTATTEMPT = 0
+        except socket.timeout:
+            if self.TIMEOUTATTEMPT >= self.MAXTIMEOUT:
+                logger.info("Max Timeout Attempts Occurred - CLOSING CLIENT", self.TIMEOUTATTEMPT)
+                exit(1)
+            return
 
     def run(self):
         while not self.states.is_complete:
@@ -119,7 +139,6 @@ class StateHandler:
                 packet.header['srcport'] = self.cp
                 packet.header['dstport'] = self.sp
                 packet.header['seqnum'] = random.randint(1, 50000)
-                packet.header['dataoffset'] = 5
                 self.previousSentSeqnum = packet.header['seqnum']
 
                 self.send(packet)
@@ -132,7 +151,6 @@ class StateHandler:
                 packet.header['dstport'] = self.sp
                 packet.header['seqnum'] = self.previousSentSeqnum + 1
                 packet.header['acknum'] = self.previousACK + 1
-                packet.header['dataoffset'] = 5
                 self.previousSentSeqnum = packet.header['seqnum']
                 self.previousACK = packet.header['acknum']
 
@@ -149,7 +167,6 @@ class StateHandler:
                     packet.header['dstport'] = self.sp
                     packet.header['seqnum'] = self.previousACK
                     packet.header['acknum'] = self.previousSentSeqnum
-                    packet.header['dataoffset'] = 5
 
                     self.send(packet)
                     logger.info("Sending FIN: %s", packet.header)
@@ -159,7 +176,6 @@ class StateHandler:
                 packet = DATA()
                 packet.header['srcport'] = self.cp
                 packet.header['dstport'] = self.sp
-                packet.header['dataoffset'] = 5
                 packet.header['seqnum'] = self.previousACK
                 packet.header['acknum'] = self.previousSentSeqnum + len(databytes)
                 self.previousSentACK = packet.header['acknum']

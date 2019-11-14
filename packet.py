@@ -13,7 +13,7 @@ class Packet:  # Creates Base Class that will hold all of the Packet Information
             'dstport': 0,  # 16 Bits 16-32
             'seqnum': 0,  # 32 Bits 32-64
             'acknum': 0,  # 32 Bits 64-96
-            'dataoffset': 0,  # 4 Bits 96-100
+            'dataoffset': 5,  # 4 Bits 96-100
             'reserved': 0,  # 6 Bits 100-106
 
             # Flags Field
