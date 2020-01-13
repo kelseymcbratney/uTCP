@@ -48,6 +48,7 @@ class States(StateMachine):  # Creates State Machine from python-statemachine li
 class StateHandler:
     def __init__(self, adr, sp, cp, fn):  # Main Handler of TCP Transfer, Relies on State Machine
         self.states = States()
+        self.window = None
         self.adr = adr
         self.sp = sp
         self.cp = cp
@@ -92,6 +93,7 @@ class StateHandler:
                 packet.binary = incbits
                 packet.decode()
                 self.windowSize = packet.header['window']  # Saves Initial Window
+                self.window = Window(packet.header['window'])  # Creates Sliding Window
                 if self.error_check(packet) is True:
                     return
                 self.previousSeqnum = packet.header['seqnum']
@@ -118,6 +120,8 @@ class StateHandler:
                 return
             self.previousSeqnum = packet.header['seqnum']
             self.previousACK = packet.header['acknum']
+
+            self.window.ack_window(packet.header['seqnum'])
 
             logger.info("Received ACK: %s", packet.header)
             return packet
@@ -156,7 +160,7 @@ class StateHandler:
 
                 self.send(packet)  # SENDS ACK
                 logger.info("Sending ACK: %s", packet.header)
-                if (incpacket) is not None:
+                if incpacket is not None:
                     self.states.run('cycle')
             elif self.states.is_established is True:  # ESTABLISHED STATE -- SENDS DATA AND FIN
                 self.receive()
@@ -181,11 +185,12 @@ class StateHandler:
                 self.previousSentACK = packet.header['acknum']
                 packet.data = databytes
                 self.send(packet)  # SENDS DATA PACKET
+                self.window.add_to_window(packet)
                 logger.info("Sending Data: %s", packet.header)
 
             elif self.states.is_finwait1 is True:  # FINWAIT1 STATE -- RECEIVES FIN-ACK
                 incpacket = self.receive() # Receives FIN-ACK
-                if (incpacket) is not None:
+                if incpacket is not None:
                     self.states.run('cycle')
 
             elif self.states.is_finwait2 is True:  # FINWAIT2 STATE -- RECEIVES FIN
