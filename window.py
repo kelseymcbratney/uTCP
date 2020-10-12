@@ -14,6 +14,7 @@ class PacketWrapper:
         self.seqnum = packet.header['seqnum']
         self.sizeofdata = len(packet.data)
 
+
 class Window:
     def __init__(self, window):
         self.windowSize = window
